@@ -73,7 +73,9 @@ app.post("/webhook", async (req, res) => {
 // ========================
 // МЕССЕЖ БОЛОВСРУУЛАХ
 // ========================
-async function handleMessage(psid, text) {
+async function handleMessage(psid, text)
+console.log('PSID:', psid, 'Text:', text);
+{
   const lower = text.toLowerCase().trim();
 
   // --- ADMIN команд ---
